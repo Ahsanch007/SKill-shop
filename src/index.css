@@ -1,0 +1,264 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+/*  */
+
+.courselist {
+  display: block;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+}
+
+.courselist__item,
+.courselist__togglebutton {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  z-index: 0;
+  min-height: 24px;
+  padding-bottom: 20px;
+}
+
+.courselist__item:before,
+.courselist__togglebutton:before {
+  display: block;
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 10px;
+  width: 1px;
+  height: 100%;
+  background: #767676;
+}
+
+.courselist__item:not(.pathbar__pathitem):last-child:before,
+.courselist__togglebutton:not(.pathbar__pathitem):last-child:before {
+  height: 2px;
+}
+
+.courselist__item > a {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  color: #393b3d;
+  line-height: 24px;
+}
+
+.courselist__marker {
+  position: relative;
+  display: block;
+  flex-basis: 21px;
+  min-width: 21px;
+  height: 21px;
+  border: 1px solid #767676;
+  border-radius: 50%;
+  margin-right: 10px;
+  color: #767676;
+  background-color: #fff;
+}
+
+.courselist__itemcontent {
+  transform: translateY(-2px);
+}
+.activitysection__itemname {
+  display: inline;
+}
+.u-headingitem {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+}
+.activitysection__list .activitymeta {
+  display: inline-block;
+  line-height: inherit;
+  vertical-align: top;
+}
+.activitymeta--inline {
+  margin-left: 15px;
+}
+.activitymeta__item {
+  position: relative;
+  list-style: none;
+  display: inline-block;
+  margin-right: 10px;
+  line-height: 15px;
+  white-space: nowrap;
+}
+
+/* footer */
+/* sections =======> */
+.courselist__marker1 {
+  position: relative;
+  display: block;
+  flex-basis: 21px;
+  min-width: 22px;
+  height: 22px;
+  border: 3px solid #000000;
+  border-radius: 50%;
+  margin-right: 10px;
+  color: #767676;
+  background-color: #fff;
+}
+.courselist__item:before,
+.courselist__togglebutton1:before {
+  display: block;
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 10px;
+  width: 3px;
+  height: 100%;
+  background: #000000;
+}
+
+.shadow-inner-large {
+  box-shadow: inset 0 -10px 15px -3px rgba(0, 0, 0, 0.2);
+}
+
+.shadow-top-bottom-inner {
+  box-shadow: inset 0 10px 15px -3px rgba(0, 0, 0, 0.2),
+    inset 0 -10px 15px -3px rgba(0, 0, 0, 0.2);
+}
+
+.table-container {
+  box-shadow: 4px 0 5px -5px rgba(0, 0, 0, 0.8),
+    /* Left shadow */ -4px 0 5px -5px rgba(0, 0, 0, 0.8),
+    /* Right shadow */ 0 5px 8px -5px rgba(0, 0, 0, 1); /* Bottom shadow */
+}
+
+.table-container1 {
+  box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 1.5); /* Bottom shadow */
+}
+
+.top-shadow {
+  box-shadow: inset 0 15px 20px -6px rgba(0, 0, 0, 0.2);
+}
+/* video section */
+/* technology section */
+.active1 {
+  background-color: #1a73e8;
+  color: white;
+}
+
+.symbol {
+  color: rgb(197, 34, 31);
+  font-size: 50px;
+  height: 50px;
+  width: 50px;
+}
+.text {
+  font-weight: 300;
+  color: #3c4043;
+  font-size: 25px;
+}
+.text1 {
+  color: #3c4043;
+  font-weight: 300;
+  font-size: 30px;
+}
+.text4 {
+  color: #4285f4;
+  font-weight: 300;
+  font-size: 30px;
+}
+.Heading {
+  font-size: 42px;
+  font-weight: 500;
+}
+.text2 {
+  font-size: 42px;
+  font-weight: 500;
+}
+.text3 {
+  font-size: 27px;
+  font-weight: 500;
+}
+.example {
+  font-size: 17px;
+  color: #137333;
+  font-weight: 300;
+}
+.Instead {
+  font-size: 25px;
+  color: #c5221f;
+  font-weight: 300;
+}
+.circular-checkbox {
+  width: 25px;
+  height: 25px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 2px solid #dadce099;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  /* background-color: #fff; */
+}
+
+.circular-checkbox:hover {
+  border: 1px solid #4285f4;
+}
+.circular-checkbox:checked {
+  background-color: blue;
+}
+html {
+  scroll-behavior: smooth;
+}
+.active2 {
+  background-color: #1a73e8;
+  color: white;
+}
+.ReactCollapse--collapse {
+  transition: height 500ms;
+}
+.section_links {
+  color: #000000;
+  /* color: #3c4043; */
+  font-weight: 400;
+}
+.paragraph {
+  color: #3c4043;
+  font-weight: 400;
+  line-height: 1.25;
+  font-size: 16px;
+}
+.Bold {
+  color: #5f6368;
+  font-size: 14px;
+  line-height: 1.25;
+  font-weight: 600;
+}
+.slider1 {
+  font-size: 3rem;
+  width: 5rem;
+  height: 5rem;
+}
+.ev-video-stream-player-iframe-container{
+  position: relative;
+    display: block;
+    height: 0;
+    padding: 0;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+}
+.ev-video-stream-player-iframe{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
