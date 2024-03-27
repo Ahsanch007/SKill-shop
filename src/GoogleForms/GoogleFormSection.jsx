@@ -277,7 +277,7 @@ const GoogleFormSection = () => {
       {/* ImAge SEctION */}
       <div className="bg-[url('/assets/form6.png')] md:h-[120px] sm:h-[110px] h-[70px] bg-no-repeat bg-center bg-cover "></div>
       <div className="bg-white py-4">
-        <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-8">
+        <div className="max-w-[960px] w-[92vw] m-auto flex flex-col  ">
         <div className="flex flex-col gap-5 py-4">
             <h1 className="text">Try it out</h1>
             <p className="paragraph">Add a question in Google Forms.</p>

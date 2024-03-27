@@ -3,8 +3,17 @@ import SingleStep from "../Components/SingleStep";
 import { NavLink } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Carousel from "../Components/Carousel";
+import GenericCarousel from "../Components/GenericCarousel";
 AOS.init();
-
+const images = [
+  { image: '/assets/slide9.png', alt: 'Image 1', title: '1. Select a quClick Create a new spreadsheet.estion type. Then type the question you’d like to ask your students along with the corresponding answer choices. If you’ve selected a multiple choice question option, select Add option to add more than one answer choice to your question.' },
+  { image: '/assets/slide10.png', alt: 'Image 2', title: '2. Add 2-3 questions to your form.  ', des: '3. Try out a few different question type options as you are building your survey or quiz.  ' },
+];
+const images2 = [
+  { image: '/assets/slide11.png', alt: 'Image 1', title: '1. Navigate to the Settings page in your form. Under Responses, make sure the switch for Collect email addresses is not turned on. ' },
+  { image: '/assets/slide12.png', alt: 'Image 2', title: '2. Under Defaults, make sure Collect email addresses by default is turned off. By choosing these settings, your form will not require your student to sign in to complete the form or record their email address, allowing them to submit feedback anonymously.  ' },
+];
 const DigitalFeedbackSection = () => {
   const [activeIndex, setActiveIndex] = useState(0); // State to track active paragraph index
   const [show, setShow] = useState(false);
@@ -234,17 +243,15 @@ const DigitalFeedbackSection = () => {
                 {/* buttons ===> */}
                 <div className="grid sm:grid-cols-2 grid-cols-1 gap-3 ">
                   <button
-                    className={`btn ${
-                      activeIndex === 0 && "active1"
-                    } bg-[#dadce0] px-2 py-3 rounded-sm duration-700 hover:bg-[#1A73E8] hover:text-[white]`}
+                    className={`btn ${activeIndex === 0 && "active1"
+                      } bg-[#dadce0] px-2 py-3 rounded-sm duration-700 hover:bg-[#1A73E8] hover:text-[white]`}
                     onClick={() => handleClick(0)}
                   >
                     Give feedback in Google Docs
                   </button>
                   <button
-                    className={`btn ${
-                      activeIndex === 1 && "active1"
-                    } bg-[#dadce0] px-2 py-3 rounded-sm duration-700 hover:bg-[#1A73E8] hover:text-[white]`}
+                    className={`btn ${activeIndex === 1 && "active1"
+                      } bg-[#dadce0] px-2 py-3 rounded-sm duration-700 hover:bg-[#1A73E8] hover:text-[white]`}
                     onClick={() => handleClick(1)}
                   >
                     Insert comments
@@ -255,9 +262,8 @@ const DigitalFeedbackSection = () => {
                 {/* paragraph  */}
                 <div className="mt-4">
                   <div
-                    className={`${
-                      activeIndex === 0 ? "block" : "hidden"
-                    }  px-6 grid md:grid-cols-2 grid-cols-1 gap-8`}
+                    className={`${activeIndex === 0 ? "block" : "hidden"
+                      }  px-6 grid md:grid-cols-2 grid-cols-1 gap-8`}
                   >
                     {/* imaGE */}
                     <div className="">
@@ -276,9 +282,8 @@ const DigitalFeedbackSection = () => {
 
                   {/* seConD pArAgrAPh */}
                   <div
-                    className={`${
-                      activeIndex === 1 ? "block" : "hidden"
-                    }  px-6 grid md:grid-cols-2 grid-cols-1 gap-10`}
+                    className={`${activeIndex === 1 ? "block" : "hidden"
+                      }  px-6 grid md:grid-cols-2 grid-cols-1 gap-10`}
                   >
                     <div className="flex flex-col gap-4">
                       <ol className="list-decimal pl-12 paragraph">
@@ -430,9 +435,9 @@ const DigitalFeedbackSection = () => {
             src="blob:https://www.youtube.com/45b3ff66-03c9-47fd-92d3-3aabe7bbb16d"
           ></video> */}
 
-<div class="ev-video-stream-player-iframe-container">
-<iframe class="ev-video-stream-player-iframe" id="video-stream-player-id-64b697d732b57b1799f7012d" frameborder="0" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="Google Classroom Assignments from students and the Comment bank" width="640" height="360" src="https://www.youtube.com/embed/v1WGd-89sho?autoplay=0&amp;cc_lang_pref&amp;cc_load_policy=0&amp;color=red&amp;disablekb=0&amp;enablejsapi=1&amp;fs=1&amp;hl&amp;loop=0&amp;modestbranding=0&amp;origin=https%3A%2F%2Fskillshop.exceedlms.com&amp;playsinline=1&amp;rel=0&amp;start=0&amp;widgetid=1" data-gtm-yt-inspected-6="true"></iframe>
-  </div>
+            <div class="ev-video-stream-player-iframe-container">
+              <iframe class="ev-video-stream-player-iframe" id="video-stream-player-id-64b697d732b57b1799f7012d" frameborder="0" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="Google Classroom Assignments from students and the Comment bank" width="640" height="360" src="https://www.youtube.com/embed/v1WGd-89sho?autoplay=0&amp;cc_lang_pref&amp;cc_load_policy=0&amp;color=red&amp;disablekb=0&amp;enablejsapi=1&amp;fs=1&amp;hl&amp;loop=0&amp;modestbranding=0&amp;origin=https%3A%2F%2Fskillshop.exceedlms.com&amp;playsinline=1&amp;rel=0&amp;start=0&amp;widgetid=1" data-gtm-yt-inspected-6="true"></iframe>
+            </div>
 
             {/* button  */}
             <button
@@ -563,7 +568,7 @@ const DigitalFeedbackSection = () => {
               {/* video */}
               <video preload="auto" controls poster="/assets/original.png" src="https://storage.googleapis.com/onboarding_media/onboarding_v2/week4/lesson4_3_creatingagoogleformquiz.mp4 " tabindex="-1" />
               <img src="/assets/63bc36c2a213ce099c3bc3f9.png" alt="" width={100} height={100} className="absolute top-[45%] right-[45%]" />
-               </div>
+            </div>
           </div>
         </div>
       </div>
@@ -633,6 +638,90 @@ const DigitalFeedbackSection = () => {
 
       {/* ImaGE SeCtiON */}
       <div className="bg-[url('/assets/d10.png')] md:h-[120px] sm:h-[110px] h-[70px] bg-no-repeat bg-center bg-cover "></div>
+
+      <div className="bg-white py-4">
+        <div className="max-w-[960px] w-[92vw] m-auto flex flex-col  ">
+          <div className="flex flex-col gap-5 py-4">
+            <h1 className="text">Try it out</h1>
+            <p className="paragraph">Turn on suggesting mode.</p>
+            <p className="Bold mb-4">Click the arrow to learn more.</p>
+
+          </div>
+          <GenericCarousel
+            images={images}
+            slides={[
+              <ol key={1} className="list-decimal">
+                <li dir="ltr"><p dir="ltr">Open the <strong>apps menu</strong>.</p></li>
+                <li dir="ltr"><p dir="ltr">Then click on <strong>Docs</strong>.</p></li>
+                <li dir="ltr"><p dir="ltr">Type a sentence in the document.</p></li>
+                <li dir="ltr"><p dir="ltr">Then, click the <strong>editing drop down</strong> menu on the toolbar and click <strong>Suggesting mode</strong>.</p></li>
+                <li dir="ltr"><p dir="ltr">Add text to the document or suggest changes to the sentence you’ve written.</p></li>
+              </ol>,
+              <div key={2}>
+                <p dir="ltr">Now any changes, suggestions, and additions will be tracked, color-coded, and labeled making it easy to see who did what.&nbsp;</p>
+                <p dir="ltr"><br /></p>
+                <p dir="ltr">Once you’ve made your suggestions, students can click the checkmark to <strong>Accept suggestion</strong>. This implements the change directly in the document. They can also reject your edits by clicking the <strong>X</strong> to <strong>Reject suggestion</strong>. This gives students the ability to consider the feedback before making permanent changes to their work.</p>
+                <p dir="ltr"><br /></p>
+                <p dir="ltr">You can:<br />1. Accept one change you’ve suggested in your document.</p>
+                <p dir="ltr">2. Reject one change.</p>
+              </div>
+            ]}
+          />
+
+
+
+
+        </div>
+      </div>
+
+      <div
+        id="Suggest"
+        className="sm:pb-16 pb-12 md:pt-20 pt-12 bg-[#F9F9FA] top-shadow"
+      >
+        <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-12">
+          <div className="flex flex-col gap-8">
+            <h1 className="text1 leading-[2.4rem]">
+              Give feedback with Forms
+            </h1>
+            <p className="paragraph">
+              It’s important to teach students how to provide valuable and positive feedback to their peers. One way to do this is with Google Forms. For example, after students complete science fair projects, you could create a survey to provide feedback on a partner’s project. Questions could include whether or not the student used the scientific method to complete their project, or if their hypothesis was clear.
+            </p>
+            <p className="paragraph">
+              Let's look at the steps to ensure all responses to a form are anonymous.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="bg-[#F9F9FA] py-4">
+        <div className="max-w-[960px] w-[92vw] m-auto flex flex-col  ">
+          <div className="flex flex-col gap-5 py-4">
+            <p className="Bold mb-4">Click the arrow to learn more.</p>
+
+          </div>
+          <GenericCarousel
+            images={images2}
+            slides={[
+              <div key={1} >
+                        <p className="text-[16px]">1. Navigate to the <strong>Settings</strong> page in your form. Under <strong>Responses</strong>, make sure the switch for <strong>Collect email addresses</strong> is not turned on.&nbsp;</p>
+
+
+              </div>,
+              <div key={2}>
+            <p className="text-[16px]">2. Under&nbsp;<strong>Defaults</strong>, make sure&nbsp;<strong>Collect email addresses by default</strong> is turned off. By choosing these settings, your form will not require your student to sign in to complete the form or record their email address, allowing them to submit feedback anonymously.</p>
+
+              </div>
+            ]}
+          />
+          {/* <GenericCarousel images={images2} slide1={[
+            <p className="text-[16px]">2. Under&nbsp;<strong>Defaults</strong>, make sure&nbsp;<strong>Collect email addresses by default</strong> is turned off. By choosing these settings, your form will not require your student to sign in to complete the form or record their email address, allowing them to submit feedback anonymously.</p>
+          ]} slide2={[
+            <p className="text-[16px]">1. Navigate to the <strong>Settings</strong> page in your form. Under <strong>Responses</strong>, make sure the switch for <strong>Collect email addresses</strong> is not turned on.&nbsp;</p>
+          ]} /> */}
+
+        </div>
+      </div>
+
+      <div className="bg-[url('/assets/d30.png')] md:h-[120px] sm:h-[110px] h-[70px] bg-no-repeat bg-center bg-cover "></div>
 
       {/* 8 SEctIon */}
       <div className="sm:pb-16 pb-12 md:pt-20 pt-12">
