@@ -17,7 +17,7 @@ const GoogleFormsHero = () => {
               Create surveys and quizzes in Google Forms
             </h1>
             <div className="sm:flex items-center gap-7">
-              <div className="flex items-center gap-6">
+              <div className="  items-center gap-6 hidden">
                 <p className="text-[12px]">Published: Jul 18, 2023</p>
                 <p className="text-[12px]">7 m</p>
               </div>

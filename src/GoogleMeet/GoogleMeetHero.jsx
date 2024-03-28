@@ -16,13 +16,13 @@ const GoogleMeetHero = () => {
             <h1 className="Heading leading-[2.9rem]">
               Hold virtual conversations with Google Meet
             </h1>
-            <div className="sm:flex items-center gap-7">
+            <div className="hidden items-center gap-7">
               <div className="flex items-center gap-6">
                 <p className="text-[12px]">Published: Jul 18, 2023</p>
                 <p className="text-[12px]">6 m</p>
               </div>
               {/* review icon */}
-              <div className="flex items-center gap-2 sm:mt-0 mt-1">
+          <div className="hidden items-center gap-2 sm:mt-0 mt-1">
                 <div className="flex items-center text-[12px] gap-1">
                   <FaRegStar />
                   <FaRegStar />

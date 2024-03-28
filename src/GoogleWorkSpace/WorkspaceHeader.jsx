@@ -21,7 +21,7 @@ const WorkspaceHeader = () => {
               Introduction to using Google Workspace for Education in the
               classroom
             </h1>
-            <div className="sm:flex items-center gap-7">
+            <div className="hidden items-center gap-7">
               <div className="flex items-center gap-6">
                 <p className="text-[12px]">Published: Jun 21, 2023</p>
                 <p className="text-[12px]">8 m</p>

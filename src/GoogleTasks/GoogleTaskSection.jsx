@@ -17,6 +17,12 @@ const images2 = [
   { image: '/assets/slide33.png', alt: 'Image 2', },
   { image: '/assets/slide34.png', alt: 'Image 2', },
 ];
+const images3 = [
+  { image: '/assets/slide35.png', alt: 'Image 1', },
+  { image: '/assets/slide36.png', alt: 'Image 2', },
+  { image: '/assets/slide37.png', alt: 'Image 2', },
+  { image: '/assets/slide38.png', alt: 'Image 2', },
+];
 const GoogleTaskSection = () => {
   const [show, setShow] = useState(false);
 
@@ -347,7 +353,7 @@ const GoogleTaskSection = () => {
 
           </article>
           <GenericCarousel
-            images={images}
+            images={images3}
             slides={[
               <div key={1}>
                 <div>

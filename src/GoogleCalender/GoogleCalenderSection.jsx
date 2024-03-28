@@ -2,8 +2,14 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import GenericCarousel from "../Components/GenericCarousel";
 AOS.init();
-
+const images = [
+  { image: '/assets/slide39.png', alt: 'Image 1', },
+  { image: '/assets/slide40.png', alt: 'Image 2', },
+  { image: '/assets/slide41.png', alt: 'Image 2', },
+  { image: '/assets/slide42.png', alt: 'Image 2', },
+];
 const GoogleCalenderSection = () => {
   const [show, setShow] = useState(false);
 
@@ -279,7 +285,42 @@ const GoogleCalenderSection = () => {
 
       {/* IMAGE SECTION */}
       <div className="bg-[url('/assets/cal6.png')] md:h-[120px] sm:h-[110px] h-[70px] bg-no-repeat bg-center bg-cover "></div>
+      <div className="bg-white sm:pb-16 pb-12 md:pt-20 pt-12    ">
+        <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-8">
+          <div className="flex flex-col gap-5">
+            <h1 className="text1 leading-[2.4rem]">Try it out</h1>
+          </div>
 
+          <article className=" ">
+            <p className="paragraph">
+            In Google Calendar, you can create a calendar event for each of the various activities you have planned. Events can be for either a specific timeframe or for an entire day. As events are created, they will appear on your calendar so you can see what is occurring at a given time.
+            </p>
+            <p className="paragraph my-[40px]">
+            Try creating an event in your calendar.
+            </p>
+            <p className="Bold my-4">Click the arrow to learn more.</p>
+
+          </article>
+          <GenericCarousel
+            images={images}
+            slides={[
+              <div key={1}>
+                <div><p dir="ltr">1. Navigate to Google Calendar</p><p dir="ltr"><br /></p></div>
+              </div>,
+              <div key={2}>
+                <div><p dir="ltr">2. Click the <strong>Create</strong> button on the left of the calendar page and <strong>Create an event</strong></p><p dir="ltr"><br /></p></div>
+              </div>,
+              <div key={3}>
+                <div><p dir="ltr">3. On this creation page, you can add all of the particular details for the event such as duration, location, description, and the names of any other individuals who might need to be invited.</p><p dir="ltr"><br /></p></div>
+              </div>,
+              <div key={4}>
+                <p dir="ltr">4. Once all of the details are set, click&nbsp;<strong>Save.</strong></p>
+                </div>
+            ]}
+
+          />
+        </div>
+      </div>
       {/* THIRD sEctiON */}
       {/* Share a calendar */}
       <div

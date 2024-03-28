@@ -1,7 +1,18 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { SlBadge } from "react-icons/sl";
-
+import GenericCarousel from "../Components/GenericCarousel";
+const images = [
+  { image: '/assets/slide43.png', alt: 'Image 1', },
+  { image: '/assets/slide44.png', alt: 'Image 2', },
+  { image: '/assets/slide45.png', alt: 'Image 2', },
+  { image: '/assets/slide46.png', alt: 'Image 2', },
+];
+const images2 = [
+  { image: '/assets/slide47.png', alt: 'Image 1', width:'502px' },
+  { image: '/assets/slide48.png', alt: 'Image 2', },
+ 
+];
 const GoogleMeetSection = () => {
   const [show, setShow] = useState(false);
 
@@ -248,7 +259,37 @@ const GoogleMeetSection = () => {
 
       {/* iMAgE secTIon */}
       <div className="bg-[url('/assets/meet6.png')] md:h-[120px] sm:h-[110px] h-[70px] bg-no-repeat bg-center bg-cover "></div>
+    {/* slider section  */}
 
+    <div className="bg-white sm:pb-16 pb-12 md:pt-20 pt-12    ">
+        <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-8">
+          <div className="flex flex-col gap-5">
+            <h1 className="text1 leading-[2.4rem]">Try it out</h1>
+          </div>
+
+          <article className=" ">
+            <p className="paragraph">
+            Start a meeting from Gmail. 
+            </p>
+            <p className="Bold my-4">Click the arrow to learn more.</p>
+
+          </article>
+          <GenericCarousel
+            images={images}
+            slides={[
+              <ol key={1} className="list-decimal"><li dir="ltr"><p dir="ltr">Open Gmail.</p></li><li dir="ltr"><p dir="ltr">Navigate to <strong>Meet</strong> on the left side bar, click <strong>New meeting</strong>.</p></li></ol>,
+              <div key={2}>
+                <div><p dir="ltr">3. To send the meeting invite via link or email, click <strong>Send invite</strong>.</p><ul className="list-disc pl-[40px]"><li dir="ltr"><p dir="ltr">To copy the meeting invite details, click <strong>Copy meeting invite</strong>.</p></li><li dir="ltr"><p dir="ltr">To send an email invite, click <strong>Share via email</strong>.</p></li></ul></div>
+              </div>,
+              <div key={3}>
+                <div><p>4. When you’re ready to join the meeting, click <strong>Join now</strong>. The meeting window will open and before you join your first meeting, allow permissions for your microphone and camera. Once you grant permission:</p><ul className="list-disc pl-[40px]"><li dir="ltr"><p dir="ltr">To turn your microphone on or off, select Turn on / off microphone.</p></li><li dir="ltr"><p dir="ltr">To turn your camera on or off, select Turn on / off camera.</p></li></ul><p dir="ltr">5. To join the call, click <strong>Join now</strong>.</p></div>
+              </div>,
+              <div key={4}><p>6. To end the call, click <strong>Leave call</strong>.</p></div>
+            ]}
+
+          />
+        </div>
+      </div>
       {/* fOuRtH sEctiON */}
       {/* Schedule a video meeting from Google Calendar */}
       <div
@@ -528,6 +569,33 @@ const GoogleMeetSection = () => {
 
       {/* iMAgE secTIon */}
       <div className="bg-[url('/assets/meet6.png')] md:h-[120px] sm:h-[110px] h-[70px] bg-no-repeat bg-center bg-cover "></div>
+
+      <div className="bg-white sm:pb-16 pb-12 md:pt-20 pt-12    ">
+        <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-8">
+          <div className="flex flex-col gap-5">
+            <h1 className="text1 leading-[2.4rem]">Try it out</h1>
+          </div>
+
+          <article className=" ">
+            <p className="paragraph">
+            Track attendance.
+            </p>
+            <p className="Bold my-4">Click the arrow to learn more.</p>
+
+          </article>
+          <GenericCarousel
+            images={images2}
+            slides={[
+              <div key={1}><p dir="ltr">You can turn attendance on or off from inside a meeting.</p><p dir="ltr"><br /></p><ol className="pl-[30px] list-decimal"><li dir="ltr"><p dir="ltr">From the bottom, select <strong>Host controls</strong>.</p></li><li dir="ltr"><p dir="ltr">From the side panel that opens, switch attendance tracking on or off.</p></li></ol></div>,
+              <div key={2}><p>Or you can change these settings before a meeting starts from Google Calendar.</p><p><br /></p><ol className="pl-[30px] list-decimal"><li dir="ltr"><p dir="ltr">Go to Google Calendar and choose to create a new event or open an existing event.</p></li><li dir="ltr"><p dir="ltr">Select&nbsp;<strong>Add Google Meet video conferencing</strong>.&nbsp;</p></li><li dir="ltr"><p dir="ltr">Select the&nbsp;<strong>Video call options</strong> icon.&nbsp;</p></li><li dir="ltr"><p dir="ltr">Check the box next to&nbsp;<strong>Attendance tracking</strong>.</p></li><li dir="ltr"><p dir="ltr">Select <strong>Save</strong>.&nbsp;</p></li><li dir="ltr"><p dir="ltr">Finish setting up your event.</p></li></ol></div>
+            ]}
+
+          />
+        </div>
+      </div>
+
+      
+      <div className="bg-[url('/assets/meet-12.png')] md:h-[120px] sm:h-[110px] h-[70px] bg-no-repeat bg-center bg-cover "></div>
 
       {/* EleveNth sEctIOn */}
       <div className="sm:pt-20 pt-16 pb-12">

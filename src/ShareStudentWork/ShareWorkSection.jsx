@@ -2,8 +2,12 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import GenericCarousel from "../Components/GenericCarousel";
 AOS.init();
-
+const images2 = [
+  { image: '/assets/slide49.png', alt: 'Image 1', },
+  { image: '/assets/slide50.png', alt: 'Image 2', },
+];
 const ShareWorkSection = () => {
   const [show, setShow] = useState(false);
   const [activeModel, setActiveModel] = useState(null);
@@ -534,7 +538,34 @@ const ShareWorkSection = () => {
 
       {/* ImAgE sEcTIOn */}
       <div className="bg-[url('/assets/work8.png')] md:h-[120px] sm:h-[110px] h-[70px] bg-no-repeat bg-center bg-cover "></div>
+      <div className="bg-white sm:pb-16 pb-12 md:pt-20 pt-12    ">
+        <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-8">
+          <div className="flex flex-col gap-5">
+            <h1 className="text1 leading-[2.4rem]">Try it out</h1>
+          </div>
 
+          <article className=" ">
+            <p className="paragraph">
+            Create pages within your site.
+            </p>
+            <p className="Bold my-4">Click the arrow to learn more.</p>
+
+          </article>
+          <GenericCarousel
+            images={images2}
+            slides={[
+              <div key={1}>
+                <div><p dir="ltr">To create a new page on your site, follow these steps.</p><p dir="ltr"><br /></p><ol className="pl-[40px] list-decimal"><li dir="ltr"><p dir="ltr">Click <strong>Pages</strong> in the top right corner of your screen.</p></li><li dir="ltr"><p dir="ltr">Click the <strong>+&nbsp;</strong>icon.</p></li><li dir="ltr"><p dir="ltr">Name your page.</p></li><li><p>Select <strong>Done</strong>.</p></li></ol></div>
+                </div>,
+              <div key={2}>
+                <div><p dir="ltr">Depending on your needs, you may want to have subpages (nested pages) on your site. Let’s say you create a site for your class. You can add the syllabus as a page on your site and then add the information for exams and projects as the subpages.</p><p dir="ltr"><br /></p><p dir="ltr">To create a subpage, follow these steps.</p><p dir="ltr"><br /></p><ol className="pl-[40px] list-decimal"><li><p>At the right, click <strong>Pages</strong>.</p></li><li dir="ltr"><p dir="ltr">Select the three dots on the page you want to add subpages to.</p></li><li dir="ltr"><p dir="ltr">Click <strong>Add subpage</strong>.</p></li><li dir="ltr"><p dir="ltr">Name the new subpage.</p></li><li dir="ltr"><p dir="ltr">Click <strong>Done</strong>.</p></li><li dir="ltr"><p dir="ltr">You can drag and drop pages into your new menu. When you preview your site (see steps below), you can see your nested pages by hovering over the new menu.</p></li></ol></div>
+              </div>,
+             
+            ]}
+
+          />
+        </div>
+      </div>
       {/* SeVEnTh sEctiON */}
       {/* Add text, images, and resources */}
       <div

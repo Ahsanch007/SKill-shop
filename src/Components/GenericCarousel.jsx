@@ -22,8 +22,8 @@ const GenericCarousel = ({ images, slides }) => {
             <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
                 {/* Render images */}
                 {images.map((image, index) => (
-                    <div key={index} className={`transition-opacity  duration-700 ease-in-out ${currentSlide === index ? 'opacity-100' : 'opacity-0'} absolute inset-0`} data-carousel-item>
-                        <img src={image.image} className="absolute block w-[300px] lg:w-[800px] h-full -translate-x-1/2 object-cover -translate-y-1/2 top-1/2 left-1/2" alt={`Slide ${index + 1}`} />
+                    <div key={index} className={`transition-opacity py-4  duration-700 ease-in-out ${currentSlide === index ? 'opacity-100' : 'opacity-0'} absolute inset-0`} data-carousel-item>
+                        <img src={image.image} className={` absolute block ${image.width ? 'w-[300px] lg:w-[500px]  object-contain  ' : 'w-[300px] lg:w-[800px]  object-contain md:object-cover'}   h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2`} alt={`Slide ${index + 1}`} />
                     </div>
                 ))}
             </div>

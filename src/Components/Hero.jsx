@@ -16,7 +16,7 @@ const Hero = () => {
             <h1 className="text2 leading-[2.9rem]">
               Basic use of Google Workspace for Education Fundamentals
             </h1>
-            <div className="sm:flex items-center gap-7">
+            <div className="hidden items-center gap-7">
               <div className="flex items-center gap-6">
                 <p className="text-[12px]">Published: Mar 21, 2023</p>
                 <p className="text-[12px]">2.3h</p>

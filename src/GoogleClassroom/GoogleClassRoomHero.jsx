@@ -22,7 +22,7 @@ const GoogleClassRoomHero = () => {
                 <p className="text-[12px]">5 m</p>
               </div>
               {/* review icon */}
-              <div className="flex items-center gap-2 sm:mt-0 mt-1">
+          <div className="hidden items-center gap-2 sm:mt-0 mt-1">
                 <div className="flex items-center text-[12px] gap-1">
                   <FaRegStar />
                   <FaRegStar />

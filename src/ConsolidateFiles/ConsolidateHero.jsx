@@ -25,7 +25,7 @@ const ConsolidateHero = () => {
             <h1 className="Heading leading-[2.9rem]">
               Consolidate your files in Google Drive
             </h1>
-            <div className="sm:flex items-center gap-7">
+            <div className="hidden items-center gap-7">
               <div className="flex items-center gap-6">
                 <p className="text-[12px]">Published: May 17, 2023</p>
                 <p className="text-[12px]">7 m</p>

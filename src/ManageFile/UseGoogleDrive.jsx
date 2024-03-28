@@ -287,7 +287,7 @@ const UseGoogleDrive = () => {
           <p className="mt-10 paragraph">Watch this video to learn more.</p>
 
           {/* image div */}
-          <div className="flex flex-col gap-6 mt-12">
+          <div className="flex flex-col gap-6 mt-12 relative">
             <p className="Bold">Click play to watch the video below.</p>
             {/* <img src="./assets/m_1.png" alt="" /> */}
             {/* <video
@@ -296,16 +296,10 @@ const UseGoogleDrive = () => {
               src="/uploads/resource_courses/targets/1563115/original/course/en/assets/64184c3a2a02b50ac076e11f/video.mp4"
               tabindex="-1"
             ></video> */}
-            <iframe
-              //   width="800"
-              //   height="600"
-              src="https://www.youtube.com/embed/7EHnQ0VM4KY?si=LtrXq2i2uzzHChqw"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-              className="max-w-[960px] w-[92vw] mx-auto h-screen"
-            ></iframe>
+     
+     <video preload="auto" controls poster="/assets/original (1).png" src="/uploads/resource_courses/targets/1563115/original/course/en/assets/64184c3a2a02b50ac076e11f/video.mp4" tabindex="-1" />
+                <img src="/assets/63bc36c2a213ce099c3bc3f9.png" alt="" width={100} height={100} className="absolute top-[45%] right-[45%]" />
+
           </div>
         </div>
       </div>
