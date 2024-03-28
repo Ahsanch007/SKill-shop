@@ -2,8 +2,21 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import GenericCarousel from "../Components/GenericCarousel";
 AOS.init();
-
+const images = [
+  { image: '/assets/slide26.png', alt: 'Image 1', },
+  { image: '/assets/slide27.png', alt: 'Image 2', },
+  { image: '/assets/slide28.png', alt: 'Image 2', },
+  { image: '/assets/slide29.png', alt: 'Image 2', },
+];
+const images2 = [
+  { image: '/assets/slide30.png', alt: 'Image 1', },
+  { image: '/assets/slide31.png', alt: 'Image 2', },
+  { image: '/assets/slide32.png', alt: 'Image 2', },
+  { image: '/assets/slide33.png', alt: 'Image 2', },
+  { image: '/assets/slide34.png', alt: 'Image 2', },
+];
 const GoogleTaskSection = () => {
   const [show, setShow] = useState(false);
 
@@ -215,7 +228,44 @@ const GoogleTaskSection = () => {
 
       {/* IMAGE SECTION */}
       <div className="bg-[url('/assets/task7.png')] md:h-[120px] sm:h-[110px] h-[70px] bg-no-repeat bg-center bg-cover "></div>
+      {/* slider section  */}
 
+      <div className="bg-white sm:pb-16 pb-12 md:pt-20 pt-12    ">
+        <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-8">
+          <div className="flex flex-col gap-5">
+            <h1 className="text1 leading-[2.4rem]">Try it out</h1>
+          </div>
+
+          <article className=" ">
+            <p className="paragraph">
+              Create to-do lists in Google Tasks.
+            </p>
+            <p className="paragraph my-[30px]">
+              Convert your paper to-do list to a digital task list or think about a few tasks you need to complete and create a new list now.
+            </p>
+            <p className="Bold my-4">Click the arrow to learn more.</p>
+
+          </article>
+          <GenericCarousel
+            images={images}
+            slides={[
+              <div key={1}>
+                <div><p >1. Click&nbsp;<strong>Tasks</strong> from the Gmail side panel and your task list will appear.</p><p ><br /></p></div>
+              </div>,
+              <div key={2}>
+                <div><p >2. Then, click&nbsp;<strong>Add a task</strong>. Add the title of the task and details, and set a due date and time.</p><p ><br /></p></div>
+              </div>,
+              <div key={3}>
+                <div><p dir="ltr">3. Add subtasks by clicking the three dots to the right of the task title.</p></div>
+              </div>,
+              <div key={4}>
+                <div><p dir="ltr">4. Each task has a checkbox next to it so you can mark it as complete once it’s finished.</p></div>
+              </div>
+            ]}
+
+          />
+        </div>
+      </div>
       {/* THIRD sEctiON */}
       {/* Integrate lists in Google Tasks with Google Calendar */}
       <div
@@ -280,7 +330,44 @@ const GoogleTaskSection = () => {
 
       {/* IMAGE SECTION */}
       <div className="bg-[url('/assets/task7.png')] md:h-[120px] sm:h-[110px] h-[70px] bg-no-repeat bg-center bg-cover "></div>
+      {/* slider section  */}
 
+      <div className="bg-white sm:pb-16 pb-12 md:pt-20 pt-12  shadow-inner-large  ">
+        <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-8">
+          <div className="flex flex-col gap-5">
+            <h1 className="text1 leading-[2.4rem]">Try it out</h1>
+          </div>
+
+          <article className=" ">
+
+            <p className="paragraph mb-[30px]">
+              Turn information from an email into a task.
+            </p>
+            <p className="Bold my-4">Click the arrow to learn more.</p>
+
+          </article>
+          <GenericCarousel
+            images={images}
+            slides={[
+              <div key={1}>
+                <div>
+                  <p dir="ltr">1. From your Gmail inbox, open an email.</p>
+                </div>
+              </div>,
+              <div key={2}>
+                <div><p dir="ltr">2. Choose the <strong>Add to Tasks</strong> icon from the menu at the top of your email. The task side panel will open and the email subject will automatically be added as the title of a new task.</p><p >&nbsp;</p></div>
+              </div>,
+              <div key={3}>
+                <div><p dir="ltr">3. Add any <strong>Details</strong> needed.</p></div>
+              </div>,
+              <div key={4}>
+                <div><p dir="ltr">4. Add the due <strong>Date/time</strong>, if applicable.</p></div>
+              </div>
+            ]}
+
+          />
+        </div>
+      </div>
       {/* FiFTH sEctiON */}
       {/* Create multi-functional notes in Google Keep */}
       <div
@@ -314,7 +401,49 @@ const GoogleTaskSection = () => {
 
       {/* IMAGE SECTION */}
       <div className="bg-[url('/assets/task7.png')] md:h-[120px] sm:h-[110px] h-[70px] bg-no-repeat bg-center bg-cover "></div>
+      {/* slider section  */}
 
+      <div className="bg-white sm:pb-16 pb-12 md:pt-20 pt-12  shadow-inner-large  ">
+        <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-8">
+          <div className="flex flex-col gap-5">
+            <h1 className="text1 leading-[2.4rem]">Try it out</h1>
+          </div>
+
+          <article className=" ">
+
+            <p className="paragraph mb-[30px]">
+              Create multi-functional notes in Google Keep.
+            </p>
+            <p className="Bold my-4">Click the arrow to learn more.</p>
+
+          </article>
+          <GenericCarousel
+            images={images2}
+            slides={[
+              <div key={1}>
+                <div>
+                  <p dir="ltr">1. To start a new note in Google Keep, navigate to <a target="_blank" rel="noopener noreferrer" href="//keep.google.com" class="ev-inline-link">keep.google.com</a>.</p>
+                </div>
+              </div>,
+              <div key={2}>
+                <div>
+                  <p dir="ltr">2. Click&nbsp;<strong>Take a Note</strong> and type a reminder note to yourself.</p>
+                </div>
+              </div>,
+              <div key={3}>
+                <div><p dir="ltr">3. Give your note a title. Each note has the option to add a title, but it is not required.</p></div>
+              </div>,
+              <div key={4}>
+                <div><p dir="ltr">4. At the bottom of the note you have many additional options to choose from. Explore the options and practice adding some of these features to your note. Give your note a background color design or add an image from your computer. You might want to color code your notes. For example, blue for professional notes and orange for personal notes.</p><p dir="ltr"><br /></p></div>
+              </div>,
+              <div key={5}>
+                <div><p dir="ltr">5. Click&nbsp;<strong>Close</strong> to save the note.</p></div>
+              </div>
+            ]}
+
+          />
+        </div>
+      </div>
       {/* sIxTh sEctiON */}
       {/* Add a reminder to a note */}
       <div id="Reminder" className="bg-[#FFFFFF] sm:pt-20 pt-12 sm:pb-16 pb-12">
@@ -456,9 +585,9 @@ const GoogleTaskSection = () => {
             src="blob:https://www.youtube.com/45b3ff66-03c9-47fd-92d3-3aabe7bbb16d"
           ></video> */}
 
-<div class="ev-video-stream-player-iframe-container">
-<iframe class="ev-video-stream-player-iframe" id="video-stream-player-id-64b69a65657b131709cacbb9" frameborder="0" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="Collaborate in keep" width="640" height="360" src="https://www.youtube.com/embed/hRqkdZgIBdI?autoplay=0&amp;cc_lang_pref&amp;cc_load_policy=0&amp;color=red&amp;disablekb=0&amp;enablejsapi=1&amp;fs=1&amp;hl&amp;loop=0&amp;modestbranding=0&amp;origin=https%3A%2F%2Fskillshop.exceedlms.com&amp;playsinline=1&amp;rel=0&amp;start=0&amp;widgetid=1" data-gtm-yt-inspected-6="true"></iframe>
-  </div>
+            <div class="ev-video-stream-player-iframe-container">
+              <iframe class="ev-video-stream-player-iframe" id="video-stream-player-id-64b69a65657b131709cacbb9" frameborder="0" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="Collaborate in keep" width="640" height="360" src="https://www.youtube.com/embed/hRqkdZgIBdI?autoplay=0&amp;cc_lang_pref&amp;cc_load_policy=0&amp;color=red&amp;disablekb=0&amp;enablejsapi=1&amp;fs=1&amp;hl&amp;loop=0&amp;modestbranding=0&amp;origin=https%3A%2F%2Fskillshop.exceedlms.com&amp;playsinline=1&amp;rel=0&amp;start=0&amp;widgetid=1" data-gtm-yt-inspected-6="true"></iframe>
+            </div>
 
             {/* button  */}
             <button

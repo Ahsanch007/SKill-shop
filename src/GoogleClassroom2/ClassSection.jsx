@@ -2,8 +2,18 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import GenericCarousel from "../Components/GenericCarousel";
 AOS.init();
-
+const images = [
+  { image: '/assets/slide13.png', alt: 'Image 1', },
+  { image: '/assets/slide-13.png', alt: 'Image 2', },
+  { image: '/assets/slide14.png', alt: 'Image 2', },
+];
+const images2 = [
+  { image: '/assets/slide15.png', alt: 'Image 1', },
+  { image: '/assets/slide16.png', alt: 'Image 2', },
+  { image: '/assets/slide17.png', alt: 'Image 2', },
+];
 const ClassSection = () => {
   const [show, setShow] = useState(false);
 
@@ -232,9 +242,9 @@ const ClassSection = () => {
             src="blob:https://www.youtube.com/45b3ff66-03c9-47fd-92d3-3aabe7bbb16d"
           ></video> */}
 
-<div class="ev-video-stream-player-iframe-container">
-<iframe class="ev-video-stream-player-iframe" id="video-stream-player-id-64b695446ed6a616c8dd0804" frameborder="0" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="Google Classroom Assignments from students and the Comment bank" width="640" height="360" src="https://www.youtube.com/embed/v1WGd-89sho?autoplay=0&amp;cc_lang_pref&amp;cc_load_policy=0&amp;color=red&amp;disablekb=0&amp;enablejsapi=1&amp;fs=1&amp;hl&amp;loop=0&amp;modestbranding=0&amp;origin=https%3A%2F%2Fskillshop.exceedlms.com&amp;playsinline=1&amp;rel=0&amp;start=0&amp;widgetid=1" data-gtm-yt-inspected-10="true"></iframe>
-  </div>
+            <div class="ev-video-stream-player-iframe-container">
+              <iframe class="ev-video-stream-player-iframe" id="video-stream-player-id-64b695446ed6a616c8dd0804" frameborder="0" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="Google Classroom Assignments from students and the Comment bank" width="640" height="360" src="https://www.youtube.com/embed/v1WGd-89sho?autoplay=0&amp;cc_lang_pref&amp;cc_load_policy=0&amp;color=red&amp;disablekb=0&amp;enablejsapi=1&amp;fs=1&amp;hl&amp;loop=0&amp;modestbranding=0&amp;origin=https%3A%2F%2Fskillshop.exceedlms.com&amp;playsinline=1&amp;rel=0&amp;start=0&amp;widgetid=1" data-gtm-yt-inspected-10="true"></iframe>
+            </div>
 
             {/* button  */}
             <button
@@ -308,7 +318,7 @@ const ClassSection = () => {
           {/* ViDEO DIv */}
           <div className="">
             <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-8">
-              <div className="flex flex-col gap-2 mt-2">
+              <div className="flex flex-col gap-2 mt-2 relative">
                 <p className="Bold mb-4">
                   Click play to watch the video below.
                 </p>
@@ -322,8 +332,9 @@ const ClassSection = () => {
             style="width: 905px; height: 509px; left: 0px; top: 0px;"
             src="blob:https://www.youtube.com/45b3ff66-03c9-47fd-92d3-3aabe7bbb16d"
           ></video> */}
+                <video preload="auto" controls poster="/assets/original (1).png" src="https://storage.googleapis.com/onboarding_media/onboarding_v2/week3/lesson3_6_classworkpage.mp4 " tabindex="-1" />
+                <img src="/assets/63bc36c2a213ce099c3bc3f9.png" alt="" width={100} height={100} className="absolute top-[45%] right-[45%]" />
 
-<video controls poster="/uploads/resource_courses/targets/1563071/original/course/en/assets/64184bf62a02b50ac076de73/original.png" src="https://storage.googleapis.com/onboarding_media/onboarding_v2/week3/lesson3_6_classworkpage.mp4" tabindex="-1" /> 
               </div>
             </div>
           </div>
@@ -427,9 +438,9 @@ const ClassSection = () => {
             src="blob:https://www.youtube.com/45b3ff66-03c9-47fd-92d3-3aabe7bbb16d"
           ></video> */}
 
-<div class="ev-video-stream-player-iframe-container">
-<iframe class="ev-video-stream-player-iframe" id="video-stream-player-id-64b695446ed6a616c8dd08af" frameborder="0" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="Reusing assignments and resources" width="640" height="360" src="https://www.youtube.com/embed/FadheUcD4_Q?autoplay=0&amp;cc_lang_pref&amp;cc_load_policy=0&amp;color=red&amp;disablekb=0&amp;enablejsapi=1&amp;fs=1&amp;hl&amp;loop=0&amp;modestbranding=0&amp;origin=https%3A%2F%2Fskillshop.exceedlms.com&amp;playsinline=1&amp;rel=0&amp;start=0&amp;widgetid=2" data-gtm-yt-inspected-10="true"></iframe>
-  </div>
+            <div class="ev-video-stream-player-iframe-container">
+              <iframe class="ev-video-stream-player-iframe" id="video-stream-player-id-64b695446ed6a616c8dd08af" frameborder="0" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="Reusing assignments and resources" width="640" height="360" src="https://www.youtube.com/embed/FadheUcD4_Q?autoplay=0&amp;cc_lang_pref&amp;cc_load_policy=0&amp;color=red&amp;disablekb=0&amp;enablejsapi=1&amp;fs=1&amp;hl&amp;loop=0&amp;modestbranding=0&amp;origin=https%3A%2F%2Fskillshop.exceedlms.com&amp;playsinline=1&amp;rel=0&amp;start=0&amp;widgetid=2" data-gtm-yt-inspected-10="true"></iframe>
+            </div>
 
             {/* button  */}
             <button
@@ -483,6 +494,38 @@ const ClassSection = () => {
       </div>
       {/*End oF fifth SeCtiON */}
 
+      {/* slider section  */}
+
+      <div className="bg-white sm:pb-16 pb-12 md:pt-20 pt-12    ">
+        <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-8">
+          <div className="flex flex-col gap-5">
+            <h1 className="text1 leading-[2.4rem]">Add links, videos, and files to assignments in Classroom</h1>
+          </div>
+
+          <article className=" ">
+            <p className="paragraph">
+              In Google Classroom, you can add links, videos, and files to assignments to enhance the way students experience classwork. By adding things like media, rubrics, and personalized documents to Classwork, your students can start each assignment with a better understanding of what you want them to achieve.
+            </p>
+            <p className="Bold my-4">Click the arrow to learn more.</p>
+
+          </article>
+          <GenericCarousel
+            images={images}
+            slides={[
+              <div key={1}>
+                <p>For example, instead of assigning students to read a chapter in their world history textbook, create an assignment with an embedded YouTube video or a link to an online article. The YouTube videos you add to lessons from Classroom now have larger thumbnail images. When your students are watching a video, they’ll see a larger video player.</p>
+              </div>,
+              <div key={2}>
+                <p>Then, have students answer questions about the video or article in a form in Google Forms to check their understanding.</p>
+              </div>,
+              <div key={3}>
+                <div><p>To insert the file type you’d like to attach in Classroom, click the icon in the <strong>Attach&nbsp;</strong>section of the assignment. Then, choose your file, YouTube video, or link. You can add one or more elements in a single assignment.&nbsp;</p><p><br /></p><p>When creating an assignment, you can add an individual file or folder from your Drive by clicking the <strong>Drive icon</strong>. If you want to share multiple resource materials with your students, share a folder instead of an individual file.</p></div>
+              </div>
+            ]}
+
+          />
+        </div>
+      </div>
       {/* SIXTH ScETioN */}
       {/* View assignments */}
       <div
@@ -668,6 +711,40 @@ const ClassSection = () => {
         </div>
       </div>
       {/*eND OF 9 ScETioN */}
+
+  {/* slider section  */}
+
+  <div className="bg-white sm:pb-16 pb-12 md:pt-20 pt-12    ">
+        <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-8">
+          <div className="flex flex-col gap-5">
+            <h1 className="text1 leading-[2.4rem]">Best practices for collecting work in Classroom</h1>
+          </div>
+
+          <article className=" ">
+            <p className="paragraph">
+            When students complete an assignment in Classroom, they can submit the assignment to be graded. Follow the tips below for collecting work in Classroom to make this process more efficient
+            </p>
+            <p className="Bold my-4">Click the arrow to learn more.</p>
+
+          </article>
+          <GenericCarousel
+            images={images2}
+            slides={[
+              <div key={1}>
+           <div><p><strong>Submit project materials.&nbsp;</strong></p><p>If you want your students to submit a project that includes multiple documents, have them submit all project materials in Classroom. To submit multiple materials, students can click on <strong>Add</strong> <strong>or create</strong> to select a Drive file, local file, or URL to attach their materials. </p></div>
+                </div>,
+              <div key={2}>
+                <div><p><strong>Have students mark assignments as done.</strong></p><p> Sometimes your students will have an assignment to complete, but nothing to submit. If you want a record of your students completing a task like watching a video or reading an article, have them select <strong>Mark as done</strong>. Students can add <strong>Private comments</strong> to you about the activity they completed if they have any questions about the material. </p></div>
+              </div>,
+              <div key={3}>
+              <div><p><strong>Return student work. </strong></p><p>After students have submitted their work, you can review it, grade it, and return it so students can see their results. Within each assignment there is a checkbox at the top left of the screen that allows you to select <strong>All students</strong> or individual students, whether they submitted work or not. Click <strong>Return</strong> to send assignments back to students.</p></div>
+              </div>
+            ]}
+
+          />
+        </div>
+      </div>
+
 
       {/* 10 ScETioN */}
       {/* Best practices for collecting work in Drive */}
