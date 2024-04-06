@@ -12,7 +12,7 @@ const OrganizeSearchGmail = () => {
       <OrganizeSections />
       <PrioritizeEmail />
       <HighLightEmail />
-      <OrganizeFooter />
+      {/* <OrganizeFooter /> */}
     </div>
   );
 };

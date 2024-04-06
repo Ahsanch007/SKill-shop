@@ -8,7 +8,7 @@ const StudentProgress = () => {
     <div>
       <StudentProgressHero />
       <StudentProgressSection />
-      <StudentProgressFooter />
+      {/* <StudentProgressFooter /> */}
     </div>
   );
 };

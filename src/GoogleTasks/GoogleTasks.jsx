@@ -8,7 +8,7 @@ const GoogleTasks = () => {
     <div>
       <GoogleTaskHero />
       <GoogleTaskSection />
-      <GoogleTaskFooter />
+      {/* <GoogleTaskFooter /> */}
     </div>
   );
 };

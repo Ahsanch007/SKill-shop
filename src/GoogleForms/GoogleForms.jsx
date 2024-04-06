@@ -8,7 +8,7 @@ const GoogleForms = () => {
     <div>
       <GoogleFormsHero />
       <GoogleFormSection />
-      <GoogleFormFooter />
+      {/* <GoogleFormFooter /> */}
     </div>
   );
 };

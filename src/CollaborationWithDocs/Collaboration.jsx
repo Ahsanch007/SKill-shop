@@ -10,7 +10,7 @@ const Collaboration = () => {
       <CollaborationHero />
       <CollaborationSection />
       <ShareDocuments />
-      <CollaborationFooter />
+      {/* <CollaborationFooter /> */}
     </div>
   );
 };

@@ -8,7 +8,7 @@ const ShareStudentWork = () => {
     <div>
       <ShareStudentWorkHero />
       <ShareWorkSection />
-      <ShareWorkFooter />
+      {/* <ShareWorkFooter /> */}
     </div>
   );
 };

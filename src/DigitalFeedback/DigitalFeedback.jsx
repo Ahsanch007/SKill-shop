@@ -8,7 +8,7 @@ const DigitalFeedback = () => {
     <div>
       <DigitalFeedbackHero />
       <DigitalFeedbackSection />
-      <DigitalFeedbackFooter />
+      {/* <DigitalFeedbackFooter /> */}
     </div>
   );
 };

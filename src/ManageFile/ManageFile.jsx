@@ -12,7 +12,7 @@ const ManageFile = () => {
       <ManageSections />
       <UseGoogleDrive />
       <ManageVideoSectIon />
-      <ManageFooter />
+      {/* <ManageFooter /> */}
     </div>
   );
 };

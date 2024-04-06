@@ -10,7 +10,7 @@ const GoogleChat = () => {
       <GoogleChatHero />
       <GoogleChatSection />
       <TryItOutChat />
-      <GoogleChatFooter />
+      {/* <GoogleChatFooter /> */}
     </div>
   );
 };

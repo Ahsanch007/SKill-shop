@@ -8,7 +8,7 @@ const GoogleCalender = () => {
     <div>
       <GoogleCalenderHero />
       <GoogleCalenderSection />
-      <GoogleCalenderFooter />
+      {/* <GoogleCalenderFooter /> */}
     </div>
   );
 };

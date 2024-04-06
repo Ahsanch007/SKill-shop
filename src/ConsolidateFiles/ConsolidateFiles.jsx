@@ -14,7 +14,7 @@ const ConsolidateFiles = () => {
       <StartGoogleDrive />
       <UploadMaterial />
       <TryItOut />
-      <ConsolidateFooter />
+      {/* <ConsolidateFooter /> */}
     </div>
   );
 };

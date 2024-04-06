@@ -8,7 +8,7 @@ const GoogleClassroom2 = () => {
     <div>
       <GoogleClassHero />
       <ClassSection />
-      <ClassFooter />
+      {/* <ClassFooter /> */}
     </div>
   );
 };

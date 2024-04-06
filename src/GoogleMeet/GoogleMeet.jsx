@@ -9,8 +9,8 @@ const GoogleMeet = () => {
     <div>
       <GoogleMeetHero />
       <GoogleMeetSection />
-      <GoogleMeetFooter />
-      <WorkSpaceFooter />
+      {/* <GoogleMeetFooter />
+      <WorkSpaceFooter /> */}
     </div>
   );
 };

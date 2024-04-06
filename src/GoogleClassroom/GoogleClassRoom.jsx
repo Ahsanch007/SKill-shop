@@ -9,7 +9,7 @@ const GoogleClassRoom = () => {
     <div>
       <GoogleClassRoomHero />
       <GoogleClassRoomSection />
-      <GoogleClassFooter />
+      {/* <GoogleClassFooter /> */}
       <AdditionalResources />
     </div>
   );
