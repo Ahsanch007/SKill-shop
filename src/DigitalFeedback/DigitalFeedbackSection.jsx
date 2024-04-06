@@ -18,6 +18,16 @@ const DigitalFeedbackSection = () => {
   const [activeIndex, setActiveIndex] = useState(0); // State to track active paragraph index
   const [show, setShow] = useState(false);
   const [open, setOpen] = useState(false);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+
+  const handleVideoPlay = () => {
+    setIsVideoPlaying(true);
+  };
+
+  const handleVideoPause = () => {
+    setIsVideoPlaying(false);
+  };
+
 
   const toggle = () => {
     if (show) {
@@ -566,8 +576,17 @@ const DigitalFeedbackSection = () => {
             <div className="flex flex-col gap-5 relative">
               <p className="Bold">Click play to watch the video below.</p>
               {/* video */}
-              <video preload="auto" controls poster="/assets/original.png" src="https://storage.googleapis.com/onboarding_media/onboarding_v2/week4/lesson4_3_creatingagoogleformquiz.mp4 " tabindex="-1" />
-              <img src="/assets/63bc36c2a213ce099c3bc3f9.png" alt="" width={100} height={100} className="absolute top-[45%] right-[45%]" />
+              <video preload="auto" controls poster="/assets/original.png" src="https://storage.googleapis.com/onboarding_media/onboarding_v2/week4/lesson4_3_creatingagoogleformquiz.mp4 " tabindex="-1" onPlay={handleVideoPlay} onPause={handleVideoPause} />
+
+              {!isVideoPlaying && (
+                <img
+                  src="/assets/63bc36c2a213ce099c3bc3f9.png"
+                  alt=""
+                  width={100}
+                  height={100}
+                  className="absolute top-[45%] right-[45%]"
+                />
+              )}
             </div>
           </div>
         </div>
@@ -702,12 +721,12 @@ const DigitalFeedbackSection = () => {
             images={images2}
             slides={[
               <div key={1} >
-                        <p className="text-[16px]">1. Navigate to the <strong>Settings</strong> page in your form. Under <strong>Responses</strong>, make sure the switch for <strong>Collect email addresses</strong> is not turned on.&nbsp;</p>
+                <p className="text-[16px]">1. Navigate to the <strong>Settings</strong> page in your form. Under <strong>Responses</strong>, make sure the switch for <strong>Collect email addresses</strong> is not turned on.&nbsp;</p>
 
 
               </div>,
               <div key={2}>
-            <p className="text-[16px]">2. Under&nbsp;<strong>Defaults</strong>, make sure&nbsp;<strong>Collect email addresses by default</strong> is turned off. By choosing these settings, your form will not require your student to sign in to complete the form or record their email address, allowing them to submit feedback anonymously.</p>
+                <p className="text-[16px]">2. Under&nbsp;<strong>Defaults</strong>, make sure&nbsp;<strong>Collect email addresses by default</strong> is turned off. By choosing these settings, your form will not require your student to sign in to complete the form or record their email address, allowing them to submit feedback anonymously.</p>
 
               </div>
             ]}

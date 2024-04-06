@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { SlBadge } from "react-icons/sl";
 import AOS from "aos";
@@ -12,6 +12,24 @@ const images2 = [
   { image: '/assets/slide21.png', alt: 'Image 2', },
 ];
 const GoogleClassRoomSection = () => {
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const [isVideoPlaying2, setIsVideoPlaying2] = useState(false);
+
+  const handleVideoPlay = () => {
+    setIsVideoPlaying(true);
+  };
+
+  const handleVideoPause = () => {
+    setIsVideoPlaying(false);
+  };
+  const handleVideoPlay2 = () => {
+    setIsVideoPlaying2(true);
+  };
+
+  const handleVideoPause2 = () => {
+    setIsVideoPlaying2(false);
+  };
+
   return (
     <div>
       {/* fiRSt sECtION */}
@@ -112,9 +130,9 @@ const GoogleClassRoomSection = () => {
         </div>
       </div>
       {/* End oF FiRsT sEctION */}
-{/* slider section  */}
+      {/* slider section  */}
 
-<div className="bg-white sm:pb-16 pb-12 md:pt-20 pt-12    ">
+      <div className="bg-white sm:pb-16 pb-12 md:pt-20 pt-12    ">
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-8">
           <div className="flex flex-col gap-5">
             <h1 className="text1 leading-[2.4rem]">Create a class in Google Classroom</h1>
@@ -122,7 +140,7 @@ const GoogleClassRoomSection = () => {
 
           <article className=" ">
             <p className="paragraph">
-            In this lesson, you will learn how to create your own class in Google Classroom. Once you’ve set up your class, you can begin to assign work to students, share resources, collect assignments, and give feedback. Follow the steps below to create your class.
+              In this lesson, you will learn how to create your own class in Google Classroom. Once you’ve set up your class, you can begin to assign work to students, share resources, collect assignments, and give feedback. Follow the steps below to create your class.
             </p>
             <p className="Bold my-4">Click the arrow to learn more.</p>
 
@@ -133,14 +151,14 @@ const GoogleClassRoomSection = () => {
               <ol className="list-decimal" key={1}><li dir="ltr"><p dir="ltr">Open the apps menu.</p></li><li><p>Then, click <strong>Classroom</strong></p></li></ol>,
               <div key={2}>
                 <div>
-                <p dir="ltr">3. Log in or create an account to get started.<br />4. When prompted, choose <strong>Teacher</strong>.<br /><br /></p>                  </div>
+                  <p dir="ltr">3. Log in or create an account to get started.<br />4. When prompted, choose <strong>Teacher</strong>.<br /><br /></p>                  </div>
               </div>,
               <div key={3}>
                 <div><p>5. To create your first class, click the + icon and choose&nbsp;<strong>Create class</strong>.</p><p>6. Name your class, provide a section (optional), and click&nbsp;<strong>Create</strong>.&nbsp;</p><p>7. If you teach different sections of the same class, (e.g., morning and afternoon Algebra 1), you can differentiate between classes by adding a section. In a matter of seconds, your class will be created!</p></div>
               </div>,
               <div key={4}>
                 <div><p>8. You can control all classroom settings by clicking the&nbsp;<strong>Classroom settings</strong> icon at the top of the class page.&nbsp;</p><p>9. In&nbsp;<strong>Classroom settings</strong>, you can edit the class description, change the course code, and add class materials, as well as control how students post and comment on the&nbsp;<strong>Stream</strong> page.&nbsp;</p><p>10. The&nbsp;<strong>Stream</strong> page is where all assignments, class updates, and public interactions take place in Classroom.</p></div>
-                </div>
+              </div>
             ]}
 
           />
@@ -229,9 +247,16 @@ const GoogleClassRoomSection = () => {
             src="blob:https://www.youtube.com/45b3ff66-03c9-47fd-92d3-3aabe7bbb16d"
           ></video> */}
 
-<video preload="auto" controls poster="/assets/original (2).png" src="https://storage.googleapis.com/onboarding_media/onboarding_v2/week3/lesson3_4_addingstudentstoaclass.mp4" tabindex="-1" />
-                <img src="/assets/63bc36c2a213ce099c3bc3f9.png" alt="" width={100} height={100} className="absolute top-[45%] right-[45%]" />
-
+            <video preload="auto" controls poster="/assets/original (2).png" src="https://storage.googleapis.com/onboarding_media/onboarding_v2/week3/lesson3_4_addingstudentstoaclass.mp4" tabindex="-1" onPlay={handleVideoPlay} onPause={handleVideoPause} />
+            {!isVideoPlaying && (
+              <img
+                src="/assets/63bc36c2a213ce099c3bc3f9.png"
+                alt=""
+                width={100}
+                height={100}
+                className="absolute top-[45%] right-[45%]"
+              />
+            )}
           </div>
         </div>
       </div>
@@ -271,10 +296,17 @@ const GoogleClassRoomSection = () => {
             src="blob:https://www.youtube.com/45b3ff66-03c9-47fd-92d3-3aabe7bbb16d"
           ></video> */}
 
-         
-<video preload="auto" controls poster="/assets/original (3).png" src="https://storage.googleapis.com/onboarding_media/onboarding_v2/week3/lesson3_7_peoplepage.mp4" tabindex="-1" />
-                <img src="/assets/63bc36c2a213ce099c3bc3f9.png" alt="" width={100} height={100} className="absolute top-[45%] right-[45%]" />
 
+            <video preload="auto" controls poster="/assets/original (3).png" src="https://storage.googleapis.com/onboarding_media/onboarding_v2/week3/lesson3_7_peoplepage.mp4" tabindex="-1" onPlay={handleVideoPlay2} onPause={handleVideoPause2} />
+            {!isVideoPlaying2 && (
+              <img
+                src="/assets/63bc36c2a213ce099c3bc3f9.png"
+                alt=""
+                width={100}
+                height={100}
+                className="absolute top-[45%] right-[45%]"
+              />
+            )}
           </div>
         </div>
       </div>

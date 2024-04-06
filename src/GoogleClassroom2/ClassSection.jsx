@@ -16,7 +16,15 @@ const images2 = [
 ];
 const ClassSection = () => {
   const [show, setShow] = useState(false);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
+  const handleVideoPlay = () => {
+    setIsVideoPlaying(true);
+  };
+
+  const handleVideoPause = () => {
+    setIsVideoPlaying(false);
+  };
   const toggle = () => {
     if (show) {
       setShow(false);
@@ -332,9 +340,17 @@ const ClassSection = () => {
             style="width: 905px; height: 509px; left: 0px; top: 0px;"
             src="blob:https://www.youtube.com/45b3ff66-03c9-47fd-92d3-3aabe7bbb16d"
           ></video> */}
-                <video preload="auto" controls poster="/assets/original (1).png" src="https://storage.googleapis.com/onboarding_media/onboarding_v2/week3/lesson3_6_classworkpage.mp4 " tabindex="-1" />
-                <img src="/assets/63bc36c2a213ce099c3bc3f9.png" alt="" width={100} height={100} className="absolute top-[45%] right-[45%]" />
+                <video preload="auto" controls poster="/assets/original (1).png" src="https://storage.googleapis.com/onboarding_media/onboarding_v2/week3/lesson3_6_classworkpage.mp4 " tabindex="-1" onPlay={handleVideoPlay} onPause={handleVideoPause} />
 
+                {!isVideoPlaying && (
+                  <img
+                    src="/assets/63bc36c2a213ce099c3bc3f9.png"
+                    alt=""
+                    width={100}
+                    height={100}
+                    className="absolute top-[45%] right-[45%]"
+                  />
+                )}
               </div>
             </div>
           </div>
@@ -712,9 +728,9 @@ const ClassSection = () => {
       </div>
       {/*eND OF 9 ScETioN */}
 
-  {/* slider section  */}
+      {/* slider section  */}
 
-  <div className="bg-white sm:pb-16 pb-12 md:pt-20 pt-12    ">
+      <div className="bg-white sm:pb-16 pb-12 md:pt-20 pt-12    ">
         <div className="max-w-[960px] w-[92vw] m-auto flex flex-col gap-8">
           <div className="flex flex-col gap-5">
             <h1 className="text1 leading-[2.4rem]">Best practices for collecting work in Classroom</h1>
@@ -722,7 +738,7 @@ const ClassSection = () => {
 
           <article className=" ">
             <p className="paragraph">
-            When students complete an assignment in Classroom, they can submit the assignment to be graded. Follow the tips below for collecting work in Classroom to make this process more efficient
+              When students complete an assignment in Classroom, they can submit the assignment to be graded. Follow the tips below for collecting work in Classroom to make this process more efficient
             </p>
             <p className="Bold my-4">Click the arrow to learn more.</p>
 
@@ -731,13 +747,13 @@ const ClassSection = () => {
             images={images2}
             slides={[
               <div key={1}>
-           <div><p><strong>Submit project materials.&nbsp;</strong></p><p>If you want your students to submit a project that includes multiple documents, have them submit all project materials in Classroom. To submit multiple materials, students can click on <strong>Add</strong> <strong>or create</strong> to select a Drive file, local file, or URL to attach their materials. </p></div>
-                </div>,
+                <div><p><strong>Submit project materials.&nbsp;</strong></p><p>If you want your students to submit a project that includes multiple documents, have them submit all project materials in Classroom. To submit multiple materials, students can click on <strong>Add</strong> <strong>or create</strong> to select a Drive file, local file, or URL to attach their materials. </p></div>
+              </div>,
               <div key={2}>
                 <div><p><strong>Have students mark assignments as done.</strong></p><p> Sometimes your students will have an assignment to complete, but nothing to submit. If you want a record of your students completing a task like watching a video or reading an article, have them select <strong>Mark as done</strong>. Students can add <strong>Private comments</strong> to you about the activity they completed if they have any questions about the material. </p></div>
               </div>,
               <div key={3}>
-              <div><p><strong>Return student work. </strong></p><p>After students have submitted their work, you can review it, grade it, and return it so students can see their results. Within each assignment there is a checkbox at the top left of the screen that allows you to select <strong>All students</strong> or individual students, whether they submitted work or not. Click <strong>Return</strong> to send assignments back to students.</p></div>
+                <div><p><strong>Return student work. </strong></p><p>After students have submitted their work, you can review it, grade it, and return it so students can see their results. Within each assignment there is a checkbox at the top left of the screen that allows you to select <strong>All students</strong> or individual students, whether they submitted work or not. Click <strong>Return</strong> to send assignments back to students.</p></div>
               </div>
             ]}
 

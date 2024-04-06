@@ -17,7 +17,23 @@ const images2 = [
 ];
 const StudentProgressSection = () => {
   const [show, setShow] = useState(false);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const [isVideoPlaying2, setIsVideoPlaying2] = useState(false);
 
+  const handleVideoPlay = () => {
+    setIsVideoPlaying(true);
+  };
+
+  const handleVideoPause = () => {
+    setIsVideoPlaying(false);
+  };
+  const handleVideoPlay2 = () => {
+    setIsVideoPlaying2(true);
+  };
+
+  const handleVideoPause2 = () => {
+    setIsVideoPlaying2(false);
+  };
   const toggle = () => {
     if (show) {
       setShow(false);
@@ -244,15 +260,32 @@ const StudentProgressSection = () => {
               <article className="flex flex-col gap-5 relative">
                 <p className="font-bold">View responses as a summary</p>
                 <p className="Bold">Click play to watch the video below.</p>
-                <video preload="auto" controls poster="/assets/original4.png" src="https://storage.googleapis.com/onboarding_media/onboarding_v2/week4/lesson4_5_viewingstudentresponsesasasummary.mp4 " tabindex="-1" />
-              <img src="/assets/63bc36c2a213ce099c3bc3f9.png" alt="" width={100} height={100} className="absolute top-[45%] right-[45%]" />
+                <video preload="auto" controls poster="/assets/original4.png" src="https://storage.googleapis.com/onboarding_media/onboarding_v2/week4/lesson4_5_viewingstudentresponsesasasummary.mp4 " tabindex="-1" onPlay={handleVideoPlay} onPause={handleVideoPause} />
+
+                  {!isVideoPlaying && (
+              <img
+                src="/assets/63bc36c2a213ce099c3bc3f9.png"
+                alt=""
+                width={100}
+                height={100}
+                className="absolute top-[45%] right-[45%]"
+              />
+            )}
        
               </article>
               <article className="flex flex-col gap-4 relative">
                 <p className="font-bold">View responses individually</p>
                 <p className="Bold">Click play to watch the video below.</p>
-                <video preload="auto" controls poster="/assets/original3.png" src="https://storage.googleapis.com/onboarding_media/onboarding_v2/week4/lesson4_6_viewingstudentresponsesindividually.mp4 " tabindex="-1" />
-              <img src="/assets/63bc36c2a213ce099c3bc3f9.png" alt="" width={100} height={100} className="absolute top-[45%] right-[45%]" />
+                <video preload="auto" controls poster="/assets/original3.png" src="https://storage.googleapis.com/onboarding_media/onboarding_v2/week4/lesson4_6_viewingstudentresponsesindividually.mp4 " tabindex="-1" onPlay={handleVideoPlay2} onPause={handleVideoPause2} />
+                {!isVideoPlaying2 && (
+              <img
+                src="/assets/63bc36c2a213ce099c3bc3f9.png"
+                alt=""
+                width={100}
+                height={100}
+                className="absolute top-[45%] right-[45%]"
+              />
+            )}
        
               </article>
             </div>

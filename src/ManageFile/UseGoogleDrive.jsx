@@ -5,7 +5,15 @@ AOS.init();
 
 const UseGoogleDrive = () => {
   const [activeIndex, setActiveIndex] = useState(0); // State to track active paragraph index
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
+  const handleVideoPlay = () => {
+    setIsVideoPlaying(true);
+  };
+
+  const handleVideoPause = () => {
+    setIsVideoPlaying(false);
+  };
   // Function to handle button click and update active index
   const handleClick = (index) => {
     setActiveIndex(index);
@@ -297,8 +305,16 @@ const UseGoogleDrive = () => {
               tabindex="-1"
             ></video> */}
      
-     <video preload="auto" controls poster="/assets/original (1).png" src="/uploads/resource_courses/targets/1563115/original/course/en/assets/64184c3a2a02b50ac076e11f/video.mp4" tabindex="-1" />
-                <img src="/assets/63bc36c2a213ce099c3bc3f9.png" alt="" width={100} height={100} className="absolute top-[45%] right-[45%]" />
+     <video preload="auto" controls poster="/assets/original (1).png" src="/uploads/resource_courses/targets/1563115/original/course/en/assets/64184c3a2a02b50ac076e11f/video.mp4" tabindex="-1" onPlay={handleVideoPlay} onPause={handleVideoPause} />
+     {!isVideoPlaying && (
+              <img
+                src="/assets/63bc36c2a213ce099c3bc3f9.png"
+                alt=""
+                width={100}
+                height={100}
+                className="absolute top-[45%] right-[45%]"
+              />
+            )}
 
           </div>
         </div>

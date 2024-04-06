@@ -14,7 +14,23 @@ const images = [
 ];
 const GoogleFormSection = () => {
   const [display, setDisplay] = useState(false);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const [isVideoPlaying2, setIsVideoPlaying2] = useState(false);
 
+  const handleVideoPlay = () => {
+    setIsVideoPlaying(true);
+  };
+
+  const handleVideoPause = () => {
+    setIsVideoPlaying(false);
+  };
+  const handleVideoPlay2 = () => {
+    setIsVideoPlaying2(true);
+  };
+
+  const handleVideoPause2 = () => {
+    setIsVideoPlaying2(false);
+  };
   const toggle = () => {
     if (display) {
       setDisplay(false);
@@ -267,8 +283,17 @@ const GoogleFormSection = () => {
             src="blob:https://www.youtube.com/45b3ff66-03c9-47fd-92d3-3aabe7bbb16d"
           ></video> */}
 
-              <video preload="auto" controls poster="/assets/original.png" src="https://storage.googleapis.com/onboarding_media/onboarding_v2/week4/lesson4_3_creatingagoogleformquiz.mp4 " tabindex="-1" />
-              <img src="/assets/63bc36c2a213ce099c3bc3f9.png" alt="" width={100} height={100} className="absolute top-[45%] right-[45%]" />
+              <video preload="auto" controls poster="/assets/original.png" src="https://storage.googleapis.com/onboarding_media/onboarding_v2/week4/lesson4_3_creatingagoogleformquiz.mp4 " tabindex="-1" onPlay={handleVideoPlay} onPause={handleVideoPause} />
+              {!isVideoPlaying && (
+              <img
+                src="/assets/63bc36c2a213ce099c3bc3f9.png"
+                alt=""
+                width={100}
+                height={100}
+                className="absolute top-[45%] right-[45%]"
+              />
+            )}
+
           </div>
         </div>
       </div>
@@ -456,8 +481,16 @@ const GoogleFormSection = () => {
             <p className="Bold mb-4">Click play to watch the video below.</p>
             
 
-<video preload="auto" controls poster="/assets/original2.png" src="https://storage.googleapis.com/onboarding_media/onboarding_v2/week4/lesson4_4_sharingagoogleform.mp4 " tabindex="-1" />
-              <img src="/assets/63bc36c2a213ce099c3bc3f9.png" alt="" width={100} height={100} className="absolute top-[45%] right-[45%]" />
+<video preload="auto" controls poster="/assets/original2.png" src="https://storage.googleapis.com/onboarding_media/onboarding_v2/week4/lesson4_4_sharingagoogleform.mp4 " tabindex="-1" onPlay={handleVideoPlay2} onPause={handleVideoPause2} />
+{!isVideoPlaying2 && (
+              <img
+                src="/assets/63bc36c2a213ce099c3bc3f9.png"
+                alt=""
+                width={100}
+                height={100}
+                className="absolute top-[45%] right-[45%]"
+              />
+            )}
           </div>
         </div>
       </div>
