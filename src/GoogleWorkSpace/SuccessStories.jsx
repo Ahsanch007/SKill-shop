@@ -27,16 +27,21 @@ const citizens = [
     id: 1,
     img: "./assets/citizen1.png",
     text: "Open transcript",
+    audio:'/assets/audio/audio.mp3'
   },
   {
     id: 2,
     img: "./assets/citizen2.png",
     text: "Open transcript",
+    audio:'/assets/audio/audio2.mp3'
+
   },
   {
     id: 3,
     img: "./assets/citizen3.png",
     text: "Open transcript",
+    audio:'/assets/audio/audio3.mp3'
+
   },
 ];
 
@@ -236,6 +241,7 @@ const SuccessStories = () => {
                     className="flex flex-col items-center gap-4"
                   >
                     <img src={img} alt="" />
+                    <audio tabindex="0" src={citizen.audio} controls  controlslist  /> 
                     <button
                       onClick={() => setShowModel(id)}
                       className="bg-[#1A73E8] py-2 text-white w-full font-bold"
